@@ -1,0 +1,456 @@
+.SpotifyContainer{
+    max-width: 100vw;
+    max-height: 100vh;
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: 85vh 15vh;
+}
+
+.spotify_body{
+    display: grid;
+    grid-template-columns: 15vh 85vw;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(transparent, rgba(0,0,0,1));
+    background-color: rgb(32, 87, 100);
+}
+
+.body{
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+}
+
+.spotifyContainer {
+    max-width: 100vw;
+    max-height: 100vh;
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: 85vh 15vh;
+  }
+  
+  .spotify_body {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 1));
+    background-color: rgb(32, 87, 100);
+  }
+  
+  /* Main Body Styling */
+  .body {
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+  }
+  
+  /* Sidebar Styling */
+  .sideBarContainer {
+    background-color: black;
+    color: #b3b3b3;
+    display: flex;
+    flex-direction: column;
+    height: 97%;
+    width: 18%;
+    padding: 1rem;
+  }
+  
+  .top__links {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .logo {
+    text-align: center;
+    margin: 1rem 0;
+  }
+  
+  .top__links img {
+    width: 150px;
+    height: auto;
+  }
+  
+  /* Sidebar List Styling */
+  ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0;
+  }
+  
+  li {
+    display: flex;
+    gap: 1rem;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    color: #ccc; /* light grey for default */
+    align-items: center;
+  }
+  
+  /* Hover Effect */
+  li:hover {
+    color: white; /* white on hover */
+  }
+
+.top__links ul{
+    margin-top: 1rem;
+}
+  
+
+
+.footerContainer{
+    background-color: #181818;
+    height: 100%;
+
+}
+
+
+/* Parent container for playlists */
+/* Parent container for playlists */
+/* Parent container for playlists */
+.playlists-container {
+    margin-top: 1rem;
+    padding: 20px;
+    background-color: #121212;
+    color: white;
+    font-family: Arial, sans-serif;
+    border-radius: 8px;
+    max-height: 230px; /* Limit the height of the container */
+    overflow-y: auto; /* Enable vertical scrolling when content overflows */
+}
+
+/* Title for the playlists section */
+.container-name h2 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #1db954; /* Spotify green color */
+    margin-bottom: 16px;
+}
+
+/* List of playlists (each playlist as a div) */
+.playlists-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Individual playlist item */
+.playlist-item {
+    padding: 12px;
+    background-color: #181818;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: background-color 0.3s, transform 0.3s;
+    max-width: 180px; /* Set a max width to prevent overflow */
+    width: 100%; /* Ensures the width fills the container but does not exceed max-width */
+    overflow: hidden; /* Hide any content that overflows */
+    white-space: nowrap; /* Prevent text from wrapping */
+    text-overflow: ellipsis; /* Truncate text with ellipsis */
+}
+
+/* Hover effect for playlist item */
+.playlist-item:hover {
+    background-color: #1db954;
+    transform: scale(1.05);
+}
+
+/* Playlist name */
+.playlist-item span {
+    font-size: 14px; /* Adjust font size to be smaller */
+    font-weight: 600;
+    color: #ccc; /* Light color for the text */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Ensure long names are truncated */
+    white-space: nowrap; /* Prevent text wrapping */
+}
+
+/* Custom Scrollbar */
+.playlists-container::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+}
+
+/* .playlists-container::-webkit-scrollbar-thumb {
+    background-color: #1db954; /* Green thumb */
+    /* border-radius: 10px;
+    border: 2px solid #121212; /* Border around the thumb 
+}  */
+
+/* .playlists-container::-webkit-scrollbar-track {
+    background: #333; /* Dark background for the track 
+    border-radius: 10px;
+} */
+
+
+@media (max-width: 768px) {
+    .navbarContainer{
+        width: 80%;
+    }
+
+    .bodyPlaylist{
+        width: 90%;
+    }
+
+    .details .title{
+        font-size: 10px;
+        color: green;
+    }
+}
+
+.navbarContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    height: 15vh;
+    position: sticky;
+    top: 0;
+    transition: 0.3s ease-in-out;
+}
+
+
+.search__bar{
+    background-color: white;
+    width: 50%;
+    padding: 0.4rem 1rem;
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+input{
+    border: none;
+    height: 2rem;
+    width: 100%;
+}
+
+input:focus{
+    outline: none;
+}
+
+.avatar{
+    background-color: black;
+    padding: 0.3rem 0.4rem;
+    padding-right: 1rem;
+    border-radius: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.avatar a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.avatar svg{
+    font-size: 1.3rem;
+    background-color: #282828;
+    padding: 0.2rem;
+    border-radius: 1rem;
+    color: #c7c5c5;
+}
+
+.playlist{
+    margin: 0 2rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.image img{
+    height: 15rem;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+}
+
+.details{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    color: #e0dede;
+}
+
+.details .title{
+    color: white;
+    font-size: 4rem;
+
+}
+
+@media (max-width: 768px) {
+    .details .title{
+        font-size: 3rem;
+    }
+}
+
+
+.list .header__row{
+    display: grid;
+    grid-template-columns: 0.3fr 3fr 2fr 0.1fr;
+    color: #dddcdc;
+    margin: 1rem 0 0 0;
+    position: sticky;
+    top: 18vh;
+    margin-top: 2rem;
+    padding: 1rem 3rem;
+    transition: 0.3s ease-in-out;
+}
+
+.list .tracks{
+    margin: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5rem;
+}
+.list .row{
+    padding: 0.5rem 1rem;
+    display: grid;
+    grid-template-columns: 0.3fr 3.1fr 1.9fr 0.1fr;
+}
+.list .row:hover{
+    background-color: rgba(0, 0, 0, 0.7) ;
+}
+
+.list .row .col{
+    display: flex;
+    align-items: center;
+    color: #dddcdc;
+}
+
+.list .row .col img {
+    height: 40px;
+}
+
+.list .row .detail{
+    display: flex;
+    gap: 1rem;
+
+}
+.list .row .detail .info{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.footerContainer {
+    background-color: #181818;
+    height: 100%;
+    width: 100%;
+    border-top: 1px solid #282828;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+}
+
+@media (max-width: 768px){
+    .footerContainer{
+        width: 80%;
+     }
+}
+
+.track{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.track__info{
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.track__info h4{
+    color: white;
+}
+.track__info h6{
+    color: white;
+}
+
+.track__image img{
+    width: 50px;
+    height: 50px;
+}
+
+.playerContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.playerContainer svg{
+    color: #b3b3b3;
+    transition: 0.3s ease-in-out;
+}
+
+.playerContainer svg:hover{
+    color: white;
+}
+
+.state svg{
+    color: white;
+}
+
+.previous, .next, .state{
+    font-size: 2rem;
+}
+
+.volume-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 120px;
+    padding: 6px;
+}
+
+.volume-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.volume-button:hover {
+    color: #1db954; /* Spotify green */
+}
+
+.volume-slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 80px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    outline: none;
+    transition: background 0.3s ease;
+    cursor: pointer;
+}
+
+.volume-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 10px;
+    height: 10px;
+    background: #1db954;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.volume-slider::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+}
+
+.volume-slider:hover {
+    background: rgba(255, 255, 255, 0.6);
+}
